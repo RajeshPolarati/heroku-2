@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import firebase from "firebase";
+//import firebase from "firebase";
 import jwt_decode from 'jwt-decode'
 // firebase.initializeApp({
 //   apiKey: "AIzaSyCnkO4-gpMTIg6rUFkDfvqokuvznREw9K8",

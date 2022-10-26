@@ -54,19 +54,21 @@ const Login = () => {
               navigate("/createDiscount")
             }
   }
-  useEffect(()=>{
-    /* global google */
+   useEffect(()=>{
     console.log("calling");
-    google.accounts.id.initialize({
-      client_id:"91257017872-gnbq0pbl5m0kskudaqtpb2c34kgjdo60.apps.googleusercontent.com",
-      callback:handleCallback
+    window.addEventListener('load',()=>{
+          /* global google */
+        google.accounts.id.initialize({
+          client_id:"91257017872-gnbq0pbl5m0kskudaqtpb2c34kgjdo60.apps.googleusercontent.com",
+          callback:handleCallback
+        })
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          { theme: "outline", size: "large" }  // customization attributes
+        );
     })
-    google.accounts.id.renderButton(
-      document.getElementById("buttonDiv"),
-      { theme: "outline", size: "large" }  // customization attributes
-    );
     // google.accounts.id.prompt(); // also
-  },[window.onload])
+  },[])
   return (
     <div className="login">
       <div className="logo">Logo</div>

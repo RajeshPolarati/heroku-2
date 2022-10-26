@@ -57,6 +57,7 @@ const Login = () => {
    useEffect(()=>{
     console.log("calling");
     window.addEventListener('load',()=>{
+      console.log('inside listener')
           /* global google */
         google.accounts.id.initialize({
           client_id:"91257017872-gnbq0pbl5m0kskudaqtpb2c34kgjdo60.apps.googleusercontent.com",
